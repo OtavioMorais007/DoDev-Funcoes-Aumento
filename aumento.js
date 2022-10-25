@@ -19,3 +19,11 @@ Ex.: salário R$1.000,00 aumento de 10%
 salário R$1.000,00 aumento de 15%
 1000 * 1.15 = 1150
 */
+
+function NomeSalario () {
+    var nome = prompt('Insira o seu nome: ')
+    var salario = parseInt(prompt('Insira o seu salário: '))
+    return salario
+}
+
+
