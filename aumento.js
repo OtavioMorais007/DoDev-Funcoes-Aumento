@@ -20,10 +20,28 @@ salário R$1.000,00 aumento de 15%
 1000 * 1.15 = 1150
 */
 
+var nome
+var salario
+var porcentagemDeAumento
+
 function NomeSalario () {
-    var nome = prompt('Insira o seu nome: ')
-    var salario = parseInt(prompt('Insira o seu salário: '))
-    return salario
+    nome = prompt('Insira o seu nome: ')
+    salario = parseInt(prompt('Insira o seu salário: '))
+    if (salario <= 1500){
+        porcentagemDeAumento = 1.20
+    } else if (salario > 1500 && salario <= 2000){
+        porcentagemDeAumento = 1.15
+    } else if (salario > 2000 && salario <= 3000){
+        porcentagemDeAumento = 1.10
+    } else {
+        porcentagemDeAumento = 1.05
+    }
 }
 
+function AumentoSalario (salario, porcentagemDeAumento) {
+    var salarioRecaulculado = salario * porcentagemDeAumento
+    return salarioRecaulculado
+}
 
+console.log(NomeSalario())
+console.log(AumentoSalario())
